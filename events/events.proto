@@ -24,12 +24,22 @@ message ThrottleMessage {
     FrameRef frame_ref = 3;
 }
 
-message ObjectsMessage{
+message DriveModeMessage {
+    DriveMode drive_mode = 1;
+}
+
+enum DriveMode {
+    INVALID = 0;
+    USER = 1;
+    PILOT = 2;
+}
+
+message ObjectsMessage {
     repeated Object objects = 1;
     FrameRef frame_ref = 2;
 }
 
-message Object{
+message Object {
     TypeObject type = 1;
     int32 lLeft = 2;
     int32 up = 3;
@@ -38,7 +48,7 @@ message Object{
     float confidence = 6;
 }
 
-enum TypeObject{
+enum TypeObject {
     ANY = 0;
     CAR = 1;
     BUMP = 2;
