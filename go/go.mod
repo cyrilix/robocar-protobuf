@@ -1,4 +1,4 @@
-module github.com/cyrilix/robocar-protobuf
+module github.com/cyrilix/robocar-protobuf/go
 
 go 1.13
 
