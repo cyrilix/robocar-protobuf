@@ -54,3 +54,7 @@ enum TypeObject {
     BUMP = 2;
     PLOT = 3;
 }
+
+message SwitchRecordMessage {
+    bool enabled = 1;
+}
