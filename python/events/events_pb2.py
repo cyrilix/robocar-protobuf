@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='robocar.events',
   syntax='proto3',
   serialized_options=_b('Z\006events'),
-  serialized_pb=_b('\n\x13\x65vents/events.proto\x12\x0erobocar.events\"$\n\x08\x46rameRef\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\"C\n\x0c\x46rameMessage\x12$\n\x02id\x18\x01 \x01(\x0b\x32\x18.robocar.events.FrameRef\x12\r\n\x05\x66rame\x18\x02 \x01(\x0c\"d\n\x0fSteeringMessage\x12\x10\n\x08steering\x18\x01 \x01(\x02\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12+\n\tframe_ref\x18\x03 \x01(\x0b\x32\x18.robocar.events.FrameRef\"d\n\x0fThrottleMessage\x12\x10\n\x08throttle\x18\x01 \x01(\x02\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12+\n\tframe_ref\x18\x03 \x01(\x0b\x32\x18.robocar.events.FrameRef\"A\n\x10\x44riveModeMessage\x12-\n\ndrive_mode\x18\x01 \x01(\x0e\x32\x19.robocar.events.DriveMode\"f\n\x0eObjectsMessage\x12\'\n\x07objects\x18\x01 \x03(\x0b\x32\x16.robocar.events.Object\x12+\n\tframe_ref\x18\x02 \x01(\x0b\x32\x18.robocar.events.FrameRef\"\x80\x01\n\x06Object\x12(\n\x04type\x18\x01 \x01(\x0e\x32\x1a.robocar.events.TypeObject\x12\r\n\x05lLeft\x18\x02 \x01(\x05\x12\n\n\x02up\x18\x03 \x01(\x05\x12\r\n\x05right\x18\x04 \x01(\x05\x12\x0e\n\x06\x62ottom\x18\x05 \x01(\x05\x12\x12\n\nconfidence\x18\x06 \x01(\x02\"&\n\x13SwitchRecordMessage\x12\x0f\n\x07\x65nabled\x18\x01 \x01(\x08*-\n\tDriveMode\x12\x0b\n\x07INVALID\x10\x00\x12\x08\n\x04USER\x10\x01\x12\t\n\x05PILOT\x10\x02*2\n\nTypeObject\x12\x07\n\x03\x41NY\x10\x00\x12\x07\n\x03\x43\x41R\x10\x01\x12\x08\n\x04\x42UMP\x10\x02\x12\x08\n\x04PLOT\x10\x03\x42\x08Z\x06\x65ventsb\x06proto3')
+  serialized_pb=_b('\n\x13\x65vents/events.proto\x12\x0erobocar.events\"$\n\x08\x46rameRef\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\"C\n\x0c\x46rameMessage\x12$\n\x02id\x18\x01 \x01(\x0b\x32\x18.robocar.events.FrameRef\x12\r\n\x05\x66rame\x18\x02 \x01(\x0c\"d\n\x0fSteeringMessage\x12\x10\n\x08steering\x18\x01 \x01(\x02\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12+\n\tframe_ref\x18\x03 \x01(\x0b\x32\x18.robocar.events.FrameRef\"d\n\x0fThrottleMessage\x12\x10\n\x08throttle\x18\x01 \x01(\x02\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12+\n\tframe_ref\x18\x03 \x01(\x0b\x32\x18.robocar.events.FrameRef\"A\n\x10\x44riveModeMessage\x12-\n\ndrive_mode\x18\x01 \x01(\x0e\x32\x19.robocar.events.DriveMode\"f\n\x0eObjectsMessage\x12\'\n\x07objects\x18\x01 \x03(\x0b\x32\x16.robocar.events.Object\x12+\n\tframe_ref\x18\x02 \x01(\x0b\x32\x18.robocar.events.FrameRef\"\x80\x01\n\x06Object\x12(\n\x04type\x18\x01 \x01(\x0e\x32\x1a.robocar.events.TypeObject\x12\x0c\n\x04left\x18\x02 \x01(\x05\x12\x0b\n\x03top\x18\x03 \x01(\x05\x12\r\n\x05right\x18\x04 \x01(\x05\x12\x0e\n\x06\x62ottom\x18\x05 \x01(\x05\x12\x12\n\nconfidence\x18\x06 \x01(\x02\"&\n\x13SwitchRecordMessage\x12\x0f\n\x07\x65nabled\x18\x01 \x01(\x08*-\n\tDriveMode\x12\x0b\n\x07INVALID\x10\x00\x12\x08\n\x04USER\x10\x01\x12\t\n\x05PILOT\x10\x02*2\n\nTypeObject\x12\x07\n\x03\x41NY\x10\x00\x12\x07\n\x03\x43\x41R\x10\x01\x12\x08\n\x04\x42UMP\x10\x02\x12\x08\n\x04PLOT\x10\x03\x42\x08Z\x06\x65ventsb\x06proto3')
 )
 
 _DRIVEMODE = _descriptor.EnumDescriptor(
@@ -341,14 +341,14 @@ _OBJECT = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='lLeft', full_name='robocar.events.Object.lLeft', index=1,
+      name='left', full_name='robocar.events.Object.left', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='up', full_name='robocar.events.Object.up', index=2,
+      name='top', full_name='robocar.events.Object.top', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,

@@ -39,10 +39,11 @@ message ObjectsMessage {
     FrameRef frame_ref = 2;
 }
 
+// BoundingBox that contains an object
 message Object {
     TypeObject type = 1;
-    int32 lLeft = 2;
-    int32 up = 3;
+    int32 left = 2;
+    int32 top = 3;
     int32 right = 4;
     int32 bottom = 5;
     float confidence = 6;
