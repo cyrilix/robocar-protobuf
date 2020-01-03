@@ -67,6 +67,7 @@ message SwitchRecordMessage {
 message RoadMessage {
     repeated Point contour = 1; // list of points that describes road contour
     Ellipse ellipse = 2; // rotated ellipse that fit road contour
+    FrameRef frame_ref = 3; // Reference to the frame used for compute
 }
 
 message Point {
