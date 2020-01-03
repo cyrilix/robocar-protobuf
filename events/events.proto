@@ -2,9 +2,12 @@ syntax = "proto3";
 package robocar.events;
 option go_package = "events";
 
+import "google/protobuf/timestamp.proto";
+
 message FrameRef {
     string name = 1;
     string id = 2;
+    google.protobuf.Timestamp created_at= 3;
 }
 
 message FrameMessage {

@@ -13,6 +13,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,8 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='robocar.events',
   syntax='proto3',
   serialized_options=_b('Z\006events'),
-  serialized_pb=_b('\n\x13\x65vents/events.proto\x12\x0erobocar.events\"$\n\x08\x46rameRef\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\"C\n\x0c\x46rameMessage\x12$\n\x02id\x18\x01 \x01(\x0b\x32\x18.robocar.events.FrameRef\x12\r\n\x05\x66rame\x18\x02 \x01(\x0c\"d\n\x0fSteeringMessage\x12\x10\n\x08steering\x18\x01 \x01(\x02\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12+\n\tframe_ref\x18\x03 \x01(\x0b\x32\x18.robocar.events.FrameRef\"d\n\x0fThrottleMessage\x12\x10\n\x08throttle\x18\x01 \x01(\x02\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12+\n\tframe_ref\x18\x03 \x01(\x0b\x32\x18.robocar.events.FrameRef\"A\n\x10\x44riveModeMessage\x12-\n\ndrive_mode\x18\x01 \x01(\x0e\x32\x19.robocar.events.DriveMode\"f\n\x0eObjectsMessage\x12\'\n\x07objects\x18\x01 \x03(\x0b\x32\x16.robocar.events.Object\x12+\n\tframe_ref\x18\x02 \x01(\x0b\x32\x18.robocar.events.FrameRef\"\x80\x01\n\x06Object\x12(\n\x04type\x18\x01 \x01(\x0e\x32\x1a.robocar.events.TypeObject\x12\x0c\n\x04left\x18\x02 \x01(\x05\x12\x0b\n\x03top\x18\x03 \x01(\x05\x12\r\n\x05right\x18\x04 \x01(\x05\x12\x0e\n\x06\x62ottom\x18\x05 \x01(\x05\x12\x12\n\nconfidence\x18\x06 \x01(\x02\"&\n\x13SwitchRecordMessage\x12\x0f\n\x07\x65nabled\x18\x01 \x01(\x08*-\n\tDriveMode\x12\x0b\n\x07INVALID\x10\x00\x12\x08\n\x04USER\x10\x01\x12\t\n\x05PILOT\x10\x02*2\n\nTypeObject\x12\x07\n\x03\x41NY\x10\x00\x12\x07\n\x03\x43\x41R\x10\x01\x12\x08\n\x04\x42UMP\x10\x02\x12\x08\n\x04PLOT\x10\x03\x42\x08Z\x06\x65ventsb\x06proto3')
-)
+  serialized_pb=_b('\n\x13\x65vents/events.proto\x12\x0erobocar.events\x1a\x1fgoogle/protobuf/timestamp.proto\"T\n\x08\x46rameRef\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\t\x12.\n\ncreated_at\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\"C\n\x0c\x46rameMessage\x12$\n\x02id\x18\x01 \x01(\x0b\x32\x18.robocar.events.FrameRef\x12\r\n\x05\x66rame\x18\x02 \x01(\x0c\"d\n\x0fSteeringMessage\x12\x10\n\x08steering\x18\x01 \x01(\x02\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12+\n\tframe_ref\x18\x03 \x01(\x0b\x32\x18.robocar.events.FrameRef\"d\n\x0fThrottleMessage\x12\x10\n\x08throttle\x18\x01 \x01(\x02\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12+\n\tframe_ref\x18\x03 \x01(\x0b\x32\x18.robocar.events.FrameRef\"A\n\x10\x44riveModeMessage\x12-\n\ndrive_mode\x18\x01 \x01(\x0e\x32\x19.robocar.events.DriveMode\"f\n\x0eObjectsMessage\x12\'\n\x07objects\x18\x01 \x03(\x0b\x32\x16.robocar.events.Object\x12+\n\tframe_ref\x18\x02 \x01(\x0b\x32\x18.robocar.events.FrameRef\"\x80\x01\n\x06Object\x12(\n\x04type\x18\x01 \x01(\x0e\x32\x1a.robocar.events.TypeObject\x12\x0c\n\x04left\x18\x02 \x01(\x05\x12\x0b\n\x03top\x18\x03 \x01(\x05\x12\r\n\x05right\x18\x04 \x01(\x05\x12\x0e\n\x06\x62ottom\x18\x05 \x01(\x05\x12\x12\n\nconfidence\x18\x06 \x01(\x02\"&\n\x13SwitchRecordMessage\x12\x0f\n\x07\x65nabled\x18\x01 \x01(\x08*-\n\tDriveMode\x12\x0b\n\x07INVALID\x10\x00\x12\x08\n\x04USER\x10\x01\x12\t\n\x05PILOT\x10\x02*2\n\nTypeObject\x12\x07\n\x03\x41NY\x10\x00\x12\x07\n\x03\x43\x41R\x10\x01\x12\x08\n\x04\x42UMP\x10\x02\x12\x08\n\x04PLOT\x10\x03\x42\x08Z\x06\x65ventsb\x06proto3')
+  ,
+  dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
 _DRIVEMODE = _descriptor.EnumDescriptor(
   name='DriveMode',
@@ -44,8 +46,8 @@ _DRIVEMODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=692,
-  serialized_end=737,
+  serialized_start=773,
+  serialized_end=818,
 )
 _sym_db.RegisterEnumDescriptor(_DRIVEMODE)
 
@@ -75,8 +77,8 @@ _TYPEOBJECT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=739,
-  serialized_end=789,
+  serialized_start=820,
+  serialized_end=870,
 )
 _sym_db.RegisterEnumDescriptor(_TYPEOBJECT)
 
@@ -112,6 +114,13 @@ _FRAMEREF = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='created_at', full_name='robocar.events.FrameRef.created_at', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -124,8 +133,8 @@ _FRAMEREF = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=39,
-  serialized_end=75,
+  serialized_start=72,
+  serialized_end=156,
 )
 
 
@@ -162,8 +171,8 @@ _FRAMEMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=77,
-  serialized_end=144,
+  serialized_start=158,
+  serialized_end=225,
 )
 
 
@@ -207,8 +216,8 @@ _STEERINGMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=146,
-  serialized_end=246,
+  serialized_start=227,
+  serialized_end=327,
 )
 
 
@@ -252,8 +261,8 @@ _THROTTLEMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=248,
-  serialized_end=348,
+  serialized_start=329,
+  serialized_end=429,
 )
 
 
@@ -283,8 +292,8 @@ _DRIVEMODEMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=350,
-  serialized_end=415,
+  serialized_start=431,
+  serialized_end=496,
 )
 
 
@@ -321,8 +330,8 @@ _OBJECTSMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=417,
-  serialized_end=519,
+  serialized_start=498,
+  serialized_end=600,
 )
 
 
@@ -387,8 +396,8 @@ _OBJECT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=522,
-  serialized_end=650,
+  serialized_start=603,
+  serialized_end=731,
 )
 
 
@@ -418,10 +427,11 @@ _SWITCHRECORDMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=652,
-  serialized_end=690,
+  serialized_start=733,
+  serialized_end=771,
 )
 
+_FRAMEREF.fields_by_name['created_at'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _FRAMEMESSAGE.fields_by_name['id'].message_type = _FRAMEREF
 _STEERINGMESSAGE.fields_by_name['frame_ref'].message_type = _FRAMEREF
 _THROTTLEMESSAGE.fields_by_name['frame_ref'].message_type = _FRAMEREF
