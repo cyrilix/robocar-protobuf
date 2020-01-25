@@ -82,3 +82,9 @@ message Ellipse {
     float angle = 4;
     float confidence = 5;
 }
+
+// Record message used to tensorflow learning
+message RecordMessage {
+    FrameMessage frame = 1;
+    SteeringMessage steering = 2;
+}
