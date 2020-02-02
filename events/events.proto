@@ -87,4 +87,5 @@ message Ellipse {
 message RecordMessage {
     FrameMessage frame = 1;
     SteeringMessage steering = 2;
+    string recordSet = 3; // Record set name
 }
