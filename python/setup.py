@@ -14,7 +14,7 @@ def package_files(directory, strip_leading):
 
 
 setup(name='robocar_protobuf',
-      version='1.0',
+      version='1.1-dev',
       description='Protobuf message definitions for robocar.',
       url='https://github.com/cyrilix/robocar-protobuf/python',
       license='Apache2',
