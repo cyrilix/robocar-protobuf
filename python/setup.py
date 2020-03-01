@@ -14,7 +14,7 @@ def package_files(directory, strip_leading):
 
 
 setup(name='robocar_protobuf',
-      version='0.1',
+      version='1.0',
       description='Protobuf message definitions for robocar.',
       url='https://github.com/cyrilix/robocar-protobuf/python',
       license='Apache2',
@@ -40,6 +40,8 @@ setup(name='robocar_protobuf',
           'Programming Language :: Python :: 3.4',
           'Programming Language :: Python :: 3.5',
           'Programming Language :: Python :: 3.6',
+          'Programming Language :: Python :: 3.7',
+          'Programming Language :: Python :: 3.8',
       ],
       keywords='selfdriving cars drive',
 
