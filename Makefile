@@ -24,10 +24,11 @@ endif
 # If $GOPATH/bin/protoc-gen-go does not exist, we'll run this command to install
 # it.
 $(PROTOC_GEN_GO):
-	go get -u github.com/golang/protobuf/protoc-gen-go
+	go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26
+	go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1
 
 events.pb.go: events/events.proto | $(PROTOC_GEN_GO) $(PROTOC)
-	protoc --go_out=./go events/events.proto
+	protoc --go_out=./go --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative events/events.proto
 
 events.pb.py: events/events.proto | $(PROTOC)
 	protoc --python_out=./python events/events.proto
