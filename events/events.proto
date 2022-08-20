@@ -42,13 +42,13 @@ message ObjectsMessage {
     FrameRef frame_ref = 2;
 }
 
-// BoundingBox that contains an object
+// BoundingBox that contains an object, coordinates as percent
 message Object {
     TypeObject type = 1;
-    int32 left = 2;
-    int32 top = 3;
-    int32 right = 4;
-    int32 bottom = 5;
+    float left = 2;
+    float top = 3;
+    float right = 4;
+    float bottom = 5;
     float confidence = 6;
 }
 
