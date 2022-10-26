@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "robocar-protobuf"
+version = "0.0.0"
+description = "Protobuf message definitions for robocar"
+authors = ["Cyrille Nofficial <cynoffic@cyrilix.fr>"]
+license = "Apache2"
+readme = "README.md"
+packages = [{include = "events"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+protobuf = "^4.21.8"
+poetry = "^1.2.2"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy-protobuf = "^3.4.0"
+
+
+[[tool.poetry.source]]
+name = "robocar"
+url = "https://git.cyrilix.bzh/api/packages/robocars/pypi"
+default = false
+secondary = false
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+build-backend = "poetry_dynamic_versioning.backend"
+
+[tool.poetry-dynamic-versioning]
+enable = true
+style = 'semver'
+vcs = 'git'
+dirty = true
+bump = true
