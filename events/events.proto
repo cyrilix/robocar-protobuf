@@ -87,5 +87,7 @@ message Ellipse {
 message RecordMessage {
     FrameMessage frame = 1;
     SteeringMessage steering = 2;
+    SteeringMessage autopilot_steering = 4;
+    DriveModeMessage drive_mode = 5;
     string recordSet = 3; // Record set name
 }

@@ -312,11 +312,17 @@ class RecordMessage(google.protobuf.message.Message):
 
     FRAME_FIELD_NUMBER: builtins.int
     STEERING_FIELD_NUMBER: builtins.int
+    AUTOPILOT_STEERING_FIELD_NUMBER: builtins.int
+    DRIVE_MODE_FIELD_NUMBER: builtins.int
     RECORDSET_FIELD_NUMBER: builtins.int
     @property
     def frame(self) -> global___FrameMessage: ...
     @property
     def steering(self) -> global___SteeringMessage: ...
+    @property
+    def autopilot_steering(self) -> global___SteeringMessage: ...
+    @property
+    def drive_mode(self) -> global___DriveModeMessage: ...
     recordSet: builtins.str
     """Record set name"""
     def __init__(
@@ -324,9 +330,11 @@ class RecordMessage(google.protobuf.message.Message):
         *,
         frame: global___FrameMessage | None = ...,
         steering: global___SteeringMessage | None = ...,
+        autopilot_steering: global___SteeringMessage | None = ...,
+        drive_mode: global___DriveModeMessage | None = ...,
         recordSet: builtins.str = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["frame", b"frame", "steering", b"steering"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["frame", b"frame", "recordSet", b"recordSet", "steering", b"steering"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["autopilot_steering", b"autopilot_steering", "drive_mode", b"drive_mode", "frame", b"frame", "steering", b"steering"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["autopilot_steering", b"autopilot_steering", "drive_mode", b"drive_mode", "frame", b"frame", "recordSet", b"recordSet", "steering", b"steering"]) -> None: ...
 
 global___RecordMessage = RecordMessage
