@@ -27,6 +27,19 @@ message ThrottleMessage {
     FrameRef frame_ref = 3;
 }
 
+enum SpeedZone {
+    UNKNOWN = 0;
+    SLOW = 1;
+    NORMAL = 2;
+    FAST = 3;
+}
+
+message SpeedZoneMessage {
+    SpeedZone speed_zone = 1;
+    float confidence = 2;
+    FrameRef frame_ref = 3;
+}
+
 message DriveModeMessage {
     DriveMode drive_mode = 1;
 }

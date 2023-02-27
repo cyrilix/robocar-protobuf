@@ -19,6 +19,25 @@ else:
 
 DESCRIPTOR: google.protobuf.descriptor.FileDescriptor
 
+class _SpeedZone:
+    ValueType = typing.NewType("ValueType", builtins.int)
+    V: typing_extensions.TypeAlias = ValueType
+
+class _SpeedZoneEnumTypeWrapper(google.protobuf.internal.enum_type_wrapper._EnumTypeWrapper[_SpeedZone.ValueType], builtins.type):
+    DESCRIPTOR: google.protobuf.descriptor.EnumDescriptor
+    UNKNOWN: _SpeedZone.ValueType  # 0
+    SLOW: _SpeedZone.ValueType  # 1
+    NORMAL: _SpeedZone.ValueType  # 2
+    FAST: _SpeedZone.ValueType  # 3
+
+class SpeedZone(_SpeedZone, metaclass=_SpeedZoneEnumTypeWrapper): ...
+
+UNKNOWN: SpeedZone.ValueType  # 0
+SLOW: SpeedZone.ValueType  # 1
+NORMAL: SpeedZone.ValueType  # 2
+FAST: SpeedZone.ValueType  # 3
+global___SpeedZone = SpeedZone
+
 class _DriveMode:
     ValueType = typing.NewType("ValueType", builtins.int)
     V: typing_extensions.TypeAlias = ValueType
@@ -143,6 +162,29 @@ class ThrottleMessage(google.protobuf.message.Message):
     def ClearField(self, field_name: typing_extensions.Literal["confidence", b"confidence", "frame_ref", b"frame_ref", "throttle", b"throttle"]) -> None: ...
 
 global___ThrottleMessage = ThrottleMessage
+
+@typing_extensions.final
+class SpeedZoneMessage(google.protobuf.message.Message):
+    DESCRIPTOR: google.protobuf.descriptor.Descriptor
+
+    SPEED_ZONE_FIELD_NUMBER: builtins.int
+    CONFIDENCE_FIELD_NUMBER: builtins.int
+    FRAME_REF_FIELD_NUMBER: builtins.int
+    speed_zone: global___SpeedZone.ValueType
+    confidence: builtins.float
+    @property
+    def frame_ref(self) -> global___FrameRef: ...
+    def __init__(
+        self,
+        *,
+        speed_zone: global___SpeedZone.ValueType = ...,
+        confidence: builtins.float = ...,
+        frame_ref: global___FrameRef | None = ...,
+    ) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["frame_ref", b"frame_ref"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["confidence", b"confidence", "frame_ref", b"frame_ref", "speed_zone", b"speed_zone"]) -> None: ...
+
+global___SpeedZoneMessage = SpeedZoneMessage
 
 @typing_extensions.final
 class DriveModeMessage(google.protobuf.message.Message):
