@@ -47,12 +47,14 @@ class _DriveModeEnumTypeWrapper(google.protobuf.internal.enum_type_wrapper._Enum
     INVALID: _DriveMode.ValueType  # 0
     USER: _DriveMode.ValueType  # 1
     PILOT: _DriveMode.ValueType  # 2
+    COPILOT: _DriveMode.ValueType  # 3
 
 class DriveMode(_DriveMode, metaclass=_DriveModeEnumTypeWrapper): ...
 
 INVALID: DriveMode.ValueType  # 0
 USER: DriveMode.ValueType  # 1
 PILOT: DriveMode.ValueType  # 2
+COPILOT: DriveMode.ValueType  # 3
 global___DriveMode = DriveMode
 
 class _TypeObject:
@@ -116,6 +118,33 @@ class FrameMessage(google.protobuf.message.Message):
     def ClearField(self, field_name: typing_extensions.Literal["frame", b"frame", "id", b"id"]) -> None: ...
 
 global___FrameMessage = FrameMessage
+
+@typing_extensions.final
+class DisparityMessage(google.protobuf.message.Message):
+    DESCRIPTOR: google.protobuf.descriptor.Descriptor
+
+    FRAME_REF_FIELD_NUMBER: builtins.int
+    DISPARITY_FIELD_NUMBER: builtins.int
+    FOCAL_LENGTH_IN_PIXELS_FIELD_NUMBER: builtins.int
+    BASELINE_IN_MM_FIELD_NUMBER: builtins.int
+    @property
+    def frame_ref(self) -> global___FrameRef: ...
+    disparity: builtins.bytes
+    focal_length_in_pixels: builtins.float
+    baseline_in_mm: builtins.float
+    """the distance between two mono cameras"""
+    def __init__(
+        self,
+        *,
+        frame_ref: global___FrameRef | None = ...,
+        disparity: builtins.bytes = ...,
+        focal_length_in_pixels: builtins.float = ...,
+        baseline_in_mm: builtins.float = ...,
+    ) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["frame_ref", b"frame_ref"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["baseline_in_mm", b"baseline_in_mm", "disparity", b"disparity", "focal_length_in_pixels", b"focal_length_in_pixels", "frame_ref", b"frame_ref"]) -> None: ...
+
+global___DisparityMessage = DisparityMessage
 
 @typing_extensions.final
 class SteeringMessage(google.protobuf.message.Message):
