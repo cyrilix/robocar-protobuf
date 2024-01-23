@@ -72,6 +72,7 @@ message Object {
     float right = 4;
     float bottom = 5;
     float confidence = 6;
+    int64 distanceInMm = 7;
 }
 
 enum TypeObject {
