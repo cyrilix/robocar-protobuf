@@ -112,5 +112,6 @@ message RecordMessage {
     SteeringMessage steering = 2;
     SteeringMessage autopilot_steering = 4;
     DriveModeMessage drive_mode = 5;
+    DisparityMessage disparity = 6;
     string recordSet = 3; // Record set name
 }

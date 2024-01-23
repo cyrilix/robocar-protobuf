@@ -263,12 +263,14 @@ class Object(google.protobuf.message.Message):
     RIGHT_FIELD_NUMBER: builtins.int
     BOTTOM_FIELD_NUMBER: builtins.int
     CONFIDENCE_FIELD_NUMBER: builtins.int
+    DISTANCEINMM_FIELD_NUMBER: builtins.int
     type: global___TypeObject.ValueType
     left: builtins.float
     top: builtins.float
     right: builtins.float
     bottom: builtins.float
     confidence: builtins.float
+    distanceInMm: builtins.int
     def __init__(
         self,
         *,
@@ -278,8 +280,9 @@ class Object(google.protobuf.message.Message):
         right: builtins.float = ...,
         bottom: builtins.float = ...,
         confidence: builtins.float = ...,
+        distanceInMm: builtins.int = ...,
     ) -> None: ...
-    def ClearField(self, field_name: typing_extensions.Literal["bottom", b"bottom", "confidence", b"confidence", "left", b"left", "right", b"right", "top", b"top", "type", b"type"]) -> None: ...
+    def ClearField(self, field_name: typing_extensions.Literal["bottom", b"bottom", "confidence", b"confidence", "distanceInMm", b"distanceInMm", "left", b"left", "right", b"right", "top", b"top", "type", b"type"]) -> None: ...
 
 global___Object = Object
 
@@ -385,6 +388,7 @@ class RecordMessage(google.protobuf.message.Message):
     STEERING_FIELD_NUMBER: builtins.int
     AUTOPILOT_STEERING_FIELD_NUMBER: builtins.int
     DRIVE_MODE_FIELD_NUMBER: builtins.int
+    DISPARITY_FIELD_NUMBER: builtins.int
     RECORDSET_FIELD_NUMBER: builtins.int
     @property
     def frame(self) -> global___FrameMessage: ...
@@ -394,6 +398,8 @@ class RecordMessage(google.protobuf.message.Message):
     def autopilot_steering(self) -> global___SteeringMessage: ...
     @property
     def drive_mode(self) -> global___DriveModeMessage: ...
+    @property
+    def disparity(self) -> global___DisparityMessage: ...
     recordSet: builtins.str
     """Record set name"""
     def __init__(
@@ -403,9 +409,10 @@ class RecordMessage(google.protobuf.message.Message):
         steering: global___SteeringMessage | None = ...,
         autopilot_steering: global___SteeringMessage | None = ...,
         drive_mode: global___DriveModeMessage | None = ...,
+        disparity: global___DisparityMessage | None = ...,
         recordSet: builtins.str = ...,
     ) -> None: ...
-    def HasField(self, field_name: typing_extensions.Literal["autopilot_steering", b"autopilot_steering", "drive_mode", b"drive_mode", "frame", b"frame", "steering", b"steering"]) -> builtins.bool: ...
-    def ClearField(self, field_name: typing_extensions.Literal["autopilot_steering", b"autopilot_steering", "drive_mode", b"drive_mode", "frame", b"frame", "recordSet", b"recordSet", "steering", b"steering"]) -> None: ...
+    def HasField(self, field_name: typing_extensions.Literal["autopilot_steering", b"autopilot_steering", "disparity", b"disparity", "drive_mode", b"drive_mode", "frame", b"frame", "steering", b"steering"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing_extensions.Literal["autopilot_steering", b"autopilot_steering", "disparity", b"disparity", "drive_mode", b"drive_mode", "frame", b"frame", "recordSet", b"recordSet", "steering", b"steering"]) -> None: ...
 
 global___RecordMessage = RecordMessage
